@@ -1,0 +1,112 @@
+#todo {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    max-width: 700px;
+    margin: 20px;
+    margin-top: 100px;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(209, 204, 204); 
+    color: rgb(68, 62, 119);
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    max-width: 390px;
+}
+
+ul li {
+    text-align: center;
+    margin: 10px;
+}
+
+ul #liMensaje {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li #p1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+ul li #p3{
+    width: 100%;
+}
+
+ul li label{
+    min-width: 150px;
+    display: inline-block;
+    height: 30px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+ul li input {
+    width: 210px;
+}
+
+ul #liRadios {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul #liSelect label {
+    margin-bottom: 7px;
+}
+
+ul li select {
+    width: 210px;
+}
+
+ul li .radio {
+    width: 20px;
+}
+
+ul li #mensaje {
+    min-width: 210px;
+    margin-bottom: 10px;
+}
+
+ul li button {
+    margin: 10px;
+}
+
+ul li hr {
+    margin: 30px;
+}
+
+.alert-danger {
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: rgb(206, 85, 85);
+    color: white;
+    border: rgb(206, 85, 85);
+}
+
+.alert-success {
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: rgb(108, 189, 101);
+    color: white;
+    border: rgb(108, 189, 101);
+}
+
+.alert-info {
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    text-align: center;
+    background-color: rgb(65, 72, 102);
+    color: white;
+    border: rgb(65, 72, 102);
+}

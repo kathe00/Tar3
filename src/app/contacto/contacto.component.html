@@ -1,0 +1,108 @@
+<div id="todo">
+    <div id="container">
+        <form [formGroup]="formulario" (ngSubmit)="enviarDatos()" novalidate>
+            <ul>
+                <li>
+                    <p id="p1">═ Servicio al Cliente ═</p>
+                </li>
+                <li>
+                    <div *ngIf="!enviado">
+                        Dejanos tu mensaje
+                    </div>
+                    <div *ngIf="enviado" class="alert alert-info">
+                        Tu mensaje ha sido enviado
+                    </div>
+                </li>
+                <li><hr></li>
+                <li>
+                    <label>Nombre completo: </label>
+                    <input id="nombre" type="text" formControlName="nombre">
+                    <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger">
+                        <div *ngIf="formulario.controls['nombre'].hasError('required')">
+                            ✘ El nombre es obligatorio.
+                        </div>
+                        <div *ngIf="formulario.controls['nombre'].hasError('maxlength')">
+                            ✘ Solo se permiten 100 caracteres.
+                        </div>
+                    </div>
+                    <div *ngIf="!formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-success">
+                        ✓ Bien
+                    </div>
+                </li>
+                <li>
+                    <label>Teléfono: </label>
+                    <input id="telefono" type="tel" formControlName="telefono" minlength="9">
+                    <div *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)" class="alert alert-danger">
+                        <div *ngIf="formulario.controls['telefono'].hasError('required')">
+                            ✘ El teléfono es obligatorio.
+                        </div>
+                        <div *ngIf="formulario.controls['telefono'].hasError('maxlength') || formulario.controls['telefono'].hasError('minlength')">
+                            ✘ El teléfono debe tener 9 números.
+                        </div>
+                        <div *ngIf="formulario.controls['telefono'].hasError('pattern')">
+                            ✘ El teléfono solo acepta números.
+                        </div>
+                    </div>
+                    <div *ngIf="!formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)" class="alert alert-success">
+                        ✓ Bien
+                    </div>
+                </li>
+                <li>
+                    <label>Correo Electrónico: </label>
+                    <input id="correo" type="email" formControlName="email">
+                    <div *ngIf="formulario.controls['email'].invalid && (formulario.controls['email'].dirty || formulario.controls['email'].touched)" class="alert alert-danger">
+                        <div *ngIf="formulario.controls['email'].hasError('required')">
+                            ✘ El correo electrónico es obligatorio.
+                        </div>
+                        <div *ngIf="formulario.controls['email'].hasError('maxlength')">
+                            ✘ Solo se permiten 100 caracteres.
+                        </div>
+                        <div *ngIf="formulario.controls['email'].hasError('pattern')">
+                            ✘ Ingrese un correo electrónico válido.
+                        </div>
+                    </div>
+                    <div *ngIf="!formulario.controls['email'].invalid && (formulario.controls['email'].dirty || formulario.controls['email'].touched)" class="alert alert-success">
+                        ✓ Bien
+                    </div>
+                </li>
+                <li id="liSelect">
+                    <label>Dirigido a: </label>
+                    <select formControlName="destinatario">
+                        <option value="contenidos">Contenidos</option>
+                        <option value="publicidad">Publicidad</option>
+                        <option value="sugerencias">Sugerencias</option>
+                        <option value="suscripcion">Suscripciones Digitales</option>
+                    </select>
+                    <div *ngIf="formulario.controls['destinatario'].invalid && (formulario.controls['destinatario'].dirty || formulario.controls['destinatario'].touched)" class="alert alert-danger">
+                        <div *ngIf="formulario.controls['destinatario'].hasError('required')">
+                            ✘ Debe seleccionar una opción.
+                        </div>
+                    </div>
+                    <div *ngIf="!formulario.controls['destinatario'].invalid && (formulario.controls['destinatario'].dirty || formulario.controls['destinatario'].touched)" class="alert alert-success">
+                        ✓ Bien
+                    </div>
+                </li>
+                <li id="liMensaje">
+                    <label>Mensaje: </label>
+                    <textarea id="mensaje" rows="3" formControlName="mensaje" maxlength="500"></textarea>
+                    <div *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert alert-danger">
+                        <div *ngIf="formulario.controls['mensaje'].hasError('required')">
+                            ✘ El mensaje es obligatorio.
+                        </div>
+                        <div *ngIf="formulario.controls['mensaje'].hasError('maxlength')">
+                            ✘ Solo se permiten 500 caracteres.
+                        </div>
+                    </div>
+                    <div *ngIf="!formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert alert-success">
+                        ✓ Bien
+                    </div>
+                </li>
+                <li><hr></li>
+                <li>
+                    <button type="submit" class="btn btn-dark" [disabled]="formulario.invalid">Enviar</button>
+                </li>
+                <li><hr></li>
+            </ul>
+        </form>
+    </div>     
+</div>
