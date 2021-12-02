@@ -1,0 +1,145 @@
+#inicio{
+    padding-top: 50px;
+}
+
+#portada{
+    width: 100%;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#destacados{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+#destacados .card{
+    margin: 20px;
+    background-color: rgb(238, 238, 238);
+    width: 350px;
+}
+
+
+#otros{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+#otros .card{
+    margin: 20px;
+    background-color: rgb(238, 238, 238);
+    width: 250px;
+}
+
+.contenedorNoticia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contenedorCerrar{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+#cerrar{
+    width: 100%;
+    max-width: 900px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-bottom: 2px solid rgb(209, 204, 204);
+}
+
+
+//colores segun clasificación
+$ent: rgb(35, 189, 48);
+$mun: rgb(40, 206, 218);
+$dep: rgb(114, 14, 52);
+$eco: rgb(142, 98, 184);
+$sal: rgb(44, 42, 170);
+$tec: rgb(221, 29, 45);
+$otro: rgb(128, 128, 128);
+
+
+.btn-entretenimiento {
+    background-color: $ent;
+    color: white;
+    border: 1px solid $ent;
+}
+.tit-entretenimiento {
+    color: $ent;
+    font-weight: bold;
+}
+.btn-mundo {
+    background-color: $mun;
+    color: white;
+    border: 1px solid $mun;
+}
+.tit-mundo {
+    color: $mun;
+    font-weight: bold;
+}
+.btn-deporte {
+    background-color: $dep;
+    color: white;
+    border: 1px solid $dep;
+}
+.tit-deporte {
+    color: $dep;
+    font-weight: bold;
+}
+.btn-economia {
+    background-color: $eco;
+    color: white;
+    border: 1px solid $eco;
+}
+.tit-economia {
+    color: $eco;
+    font-weight: bold;
+}
+.btn-salud {
+    background-color: $sal;
+    color: white;
+    border: 1px solid $sal;
+}
+.tit-salud {
+    color: $sal;
+    font-weight: bold;
+}
+.btn-tecnologia {
+    background-color: $tec;
+    color: white;
+    border: 1px solid $tec;
+}
+.tit-tecnologia {
+    color: $tec;
+    font-weight: bold;
+}
+.btn-otro {
+    background-color: white;
+    color: $otro;
+    border: 1px solid $otro;   
+}
+.tit-otro {
+    color: $otro;
+    font-weight: bold;
+}

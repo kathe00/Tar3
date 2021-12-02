@@ -1,0 +1,25 @@
+ul{
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(87, 95, 129);
+}
+
+hr{
+    width: 100%;
+}
+
+#noticias{
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+#copyright{
+    font-size: 10px;
+}

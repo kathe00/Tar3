@@ -1,0 +1,148 @@
+<div #inicio>
+    <img src="../../assets/home.jpg" id="portada" alt="descripción de la imagen">
+    <div id="container">
+        <!--    NOTICIAS DESTACADAS    -->
+        <div id="destacados">
+            <div class="card border-light text-center">
+                <img src="../../assets/1.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" #titulo1></h5>
+                    <p class="card-text" #caption1></p>
+                    <button class="btn btn-primary" #btn1>Leer más</button >
+                </div>
+            </div>
+            <div class="card border-light text-center">
+                <img src="../../assets/2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" #titulo2></h5>
+                    <p class="card-text" #caption2></p>
+                    <button class="btn btn-primary" #btn2>Leer más</button >
+                </div>
+            </div>
+            <div class="card border-light text-center">
+                <img src="../../assets/3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" #titulo3></h5>
+                    <p class="card-text" #caption3></p>
+                    <button class="btn btn-primary" #btn3>Leer más</button >
+                </div>
+            </div>
+        </div>
+        <!--    OTROS    -->
+        <div id="otros">
+            <div class="card border-light text-center">
+                <img src="../../assets/4b.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" #titulo4></h5>
+                    <p class="card-text" #caption4></p>
+                    <button class="btn btn-primary" #btn4>Leer más</button >
+                </div>
+            </div>
+            <div class="card border-light text-center">
+                <img src="../../assets/5b.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" #titulo5></h5>
+                    <p class="card-text" #caption5></p>
+                    <button class="btn btn-primary" #btn5>Leer más</button >
+                </div>
+            </div>
+            <div class="card border-light text-center">
+                <img src="../../assets/6b.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" #titulo6></h5>
+                    <p class="card-text"  #caption6></p>
+                    <button class="btn btn-primary" #btn6>Leer más</button >
+                </div>
+            </div>
+            <div class="card border-light text-center">
+                <img src="../../assets/7b.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" #titulo7></h5>
+                    <p class="card-text" #caption7></p>
+                    <button class="btn btn-primary" #btn7>Leer más</button >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<div *ngIf="idNoticia == 1" class="contenedorNoticia" #noticia>
+    <app-contenido 
+        [idTipo]="this.noticias[0].idTipo" 
+        [img1]="this.noticias[0].img1" 
+        [autor]="this.noticias[0].autor" 
+        [fecha]="this.noticias[0].fecha" 
+        [titulo]="this.noticias[0].titulo" 
+        [texto]="this.noticias[0].texto">
+    </app-contenido>
+</div>
+<div *ngIf="idNoticia == 2" class="contenedorNoticia" #noticia>
+    <app-contenido 
+        [idTipo]="this.noticias[1].idTipo" 
+        [img1]="this.noticias[1].img1" 
+        [autor]="this.noticias[1].autor" 
+        [fecha]="this.noticias[1].fecha" 
+        [titulo]="this.noticias[1].titulo" 
+        [texto]="this.noticias[1].texto">
+    </app-contenido>
+</div>
+<div *ngIf="idNoticia == 3" class="contenedorNoticia" #noticia>
+    <app-contenido 
+        [idTipo]="this.noticias[2].idTipo" 
+        [img1]="this.noticias[2].img1" 
+        [autor]="this.noticias[2].autor" 
+        [fecha]="this.noticias[2].fecha" 
+        [titulo]="this.noticias[2].titulo" 
+        [texto]="this.noticias[2].texto">
+    </app-contenido>
+</div>
+<div *ngIf="idNoticia == 4" class="contenedorNoticia" #noticia>
+    <app-contenido 
+        [idTipo]="this.noticias[3].idTipo" 
+        [img1]="this.noticias[3].img1" 
+        [autor]="this.noticias[3].autor" 
+        [fecha]="this.noticias[3].fecha" 
+        [titulo]="this.noticias[3].titulo" 
+        [texto]="this.noticias[3].texto">
+    </app-contenido>
+</div>
+<div *ngIf="idNoticia == 5" class="contenedorNoticia" #noticia>
+    <app-contenido 
+        [idTipo]="this.noticias[4].idTipo" 
+        [img1]="this.noticias[4].img1" 
+        [autor]="this.noticias[4].autor" 
+        [fecha]="this.noticias[4].fecha" 
+        [titulo]="this.noticias[4].titulo" 
+        [texto]="this.noticias[4].texto">
+    </app-contenido>
+</div>
+<div *ngIf="idNoticia == 6" class="contenedorNoticia" #noticia>
+    <app-contenido 
+        [idTipo]="this.noticias[5].idTipo" 
+        [img1]="this.noticias[5].img1" 
+        [autor]="this.noticias[5].autor" 
+        [fecha]="this.noticias[5].fecha" 
+        [titulo]="this.noticias[5].titulo" 
+        [texto]="this.noticias[5].texto">
+    </app-contenido>
+</div>
+<div *ngIf="idNoticia == 7" class="contenedorNoticia" #noticia>
+    <app-contenido 
+        [idTipo]="this.noticias[6].idTipo" 
+        [img1]="this.noticias[6].img1" 
+        [autor]="this.noticias[6].autor" 
+        [fecha]="this.noticias[6].fecha" 
+        [titulo]="this.noticias[6].titulo" 
+        [texto]="this.noticias[6].texto">
+    </app-contenido>
+</div>
+
+<div id="contenedorCerrar" >
+    <div *ngIf="idNoticia > 0" id="cerrar">
+        <button class="btn btn-dark" #btnCerrar>Cerrar</button >
+    </div>
+</div>
+
+
+
