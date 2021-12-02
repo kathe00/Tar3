@@ -1,0 +1,77 @@
+#contenedor{
+    margin: 10px;
+    margin-bottom: 0px;
+    max-width: 900px;
+    padding: 100px;
+    border-top: 2px solid rgb(209, 204, 204);
+    border-bottom: 2px solid rgb(209, 204, 204);
+}
+
+#img{
+    width: 100%;
+    max-width: 700px;
+}
+
+#titulo{
+    margin: 10px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+#autor{
+    margin: 2px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+#fecha{
+    width: 60%;
+    font-style: italic;
+    font-size: 15px;
+}
+
+#categoria{
+    font-size: 15px;
+}
+
+
+//colores segun clasificación
+$ent: rgb(35, 189, 48);
+$mun: rgb(40, 206, 218);
+$dep: rgb(114, 14, 52);
+$eco: rgb(142, 98, 184);
+$sal: rgb(44, 42, 170);
+$tec: rgb(221, 29, 45);
+$otro: rgb(128, 128, 128);
+
+
+.tit-entretenimiento {
+    color: $ent;
+    font-weight: bold;
+}
+.tit-mundo {
+    color: $mun;
+    font-weight: bold;
+}
+.tit-deporte {
+    color: $dep;
+    font-weight: bold;
+}
+.tit-economia {
+    color: $eco;
+    font-weight: bold;
+}
+.tit-salud {
+    color: $sal;
+    font-weight: bold;
+}
+.tit-tecnologia {
+    color: $tec;
+    font-weight: bold;
+}
+.tit-otro {
+    color: $otro;
+    font-weight: bold;
+}
